@@ -5,13 +5,82 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+
+		<title>Zia Climbing</title>
+
 	</head>
+
 	<body>
-		<h1> Lincoln wuzz here test test test 3 </h1>
+		<header class = "site-header">
+			<a href="/" class="logo">ZIA CLIMBING</a>
+
+			<nav>
+				<a href="#about">About</a>
+				<a href="#stories">Stories</a>
+				<a href="#gallery">Gallery</a>
+				<a href="#contact">Contact</a>
+				<a href="#" class="shop-link">Shop</a>
+			</nav>
+		</header>
+
+
+		<main>
+      		<!-- HERO -->
+      		<section class="hero">
+        		<video
+  			class="hero-video"
+  			autoplay
+  			muted
+  			loop
+  			playsinline	
+	>
+
+  			<source src="/videos/hero_video.mp4" type="video/mp4" />
+	</video>
+
+	<div class="hero-title">
+		<img src="/images/logo1.png" alt="Zia Climbing" />
+	</div>
+	</section>
+	</main>
 	</body>
 </html>
+
+
+<style>
+
+	.hero-video {
+	position: absolute;
+	inset: 0;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	z-index: 0;
+
+	opacity: 0.8;
+	}
+
+	.hero-title {
+	position: relative;
+	z-index: 1;
+	width: min(70vw, 700px);
+	text-align: center;
+	}
+
+	.hero-title img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+  .hero-title h1 {
+    font-size: clamp(3rem, 9vw, 9rem);
+    margin: 0;
+    letter-spacing: 0.08em;
+  }
+
+
+</style>
