@@ -3,84 +3,188 @@
 ---
 
 <html lang="en">
+	
+	<!-- HEADER (website name on tab) -->
+	<!---------------------------------->
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-
 		<title>Zia Climbing</title>
-
 	</head>
 
+
+	<!-- ICON FOR TAB -->
+	<!------------------>
+	<link rel="shortcut icon" href="images/logo4.png" type="image/x-icon" />
+
+
+	<!-- FONT -->
+	<!---------->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+
+	<!-- STRUCTURE OF WEBSITE -->
+	<!-------------------------->
 	<body>
-		<header class = "site-header">
-			<a href="/" class="logo">ZIA CLIMBING</a>
 
-			<nav>
-				<a href="#about">About</a>
-				<a href="#stories">Stories</a>
-				<a href="#gallery">Gallery</a>
-				<a href="#contact">Contact</a>
-				<a href="#" class="shop-link">Shop</a>
-			</nav>
-		</header>
+		<!-- HEADER/NAVBAR -->
+		<!------------------->
+		<nav class="navbar">
+			
+			<!-- LOGO ON NAVBAR -->
+			<!-------------------->
+			<div class="logo">
+				<a href="/">
+					<img src="/images/logo4.png" alt="Zia Climbing" width="50" />
+				</a>
+			</div>
+				
+			<!-- MAIN MENU LINKS -->
+			<!--------------------->	
+			<div class="main-menu">
+				<ul>
+
+					<!-- LINK TO GO TO CONTACT -->
+					<!--------------------------->
+					<li>
+						<a href="#contact"> Contact </a>
+					</li>
+
+					<!-- LINK TO GO TO ABOUT -->
+					<!------------------------->
+					<li>
+						<a href="#about"> About </a>
+					</li>
+
+					<!-- LINK TO GO TO STORIES -->
+					<!--------------------------->
+					<li>
+						<a href="#stories"> Stories </a>
+					</li>
+
+					<!-- LINK TO GO TO GALLERY -->
+					<!--------------------------->
+					<li>
+						<a href="#gallery"> Gallery </a>
+					</li>
+
+					<!-- LINK TO GO TO SHOP -->
+					<!------------------------>
+					<li>
+						<a href="#shop"> Shop </a>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+		
+		<!-- TITLE -->
+		<!----------->
+		<section class="title">
+
+			<!-- TITLE VIDEO -->
+			<!----------------->
+			<video class="title-video" autoplay muted loop playsinline>
+				<source src="/videos/hero_video.mp4" type="video/mp4" />
+			</video>
+
+			<!-- TITLE LOGO -->
+			<!---------------->
+			<div class="title-logo">
+				<img src="/images/logo1.png" alt="Zia Climbing" />
+			</div>
+
+		</section>
+
+		
+		
+		
+		
+		
+		
+	
 
 
-		<main>
-      		<!-- HERO -->
-      		<section class="hero">
-        		<video
-  			class="hero-video"
-  			autoplay
-  			muted
-  			loop
-  			playsinline	
-	>
 
-  			<source src="/videos/hero_video.mp4" type="video/mp4" />
-	</video>
-
-	<div class="hero-title">
-		<img src="/images/logo1.png" alt="Zia Climbing" />
-	</div>
-	</section>
-	</main>
 	</body>
+
+
+
 </html>
 
 
 <style>
 
-	.hero-video {
-	position: absolute;
-	inset: 0;
-
-	width: 100%;
-	height: 100%;
-
-	object-fit: cover;
-	z-index: 0;
-
-	opacity: 0.8;
+	.title-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 0;
+		opacity: 0.85;
 	}
 
-	.hero-title {
-	position: relative;
-	z-index: 1;
-	width: min(70vw, 700px);
-	text-align: center;
+	.title {
+    	min-height: 90vh;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	overflow: hidden;
+  	}
+
+	.logo {
+		position: relative;
+		z-index: 1;
 	}
 
-	.hero-title img {
-	display: block;
-	width: 100%;
-	height: auto;
-}
+	.main-menu {
+		position: absolute;
+		top: 10;
+		right: 10;
+		z-index: 1;
+		background-color: #ffffff;
+		overflow: hidden;
+	}
 
-  .hero-title h1 {
-    font-size: clamp(3rem, 9vw, 9rem);
-    margin: 0;
-    letter-spacing: 0.08em;
-  }
+	.main-menu a {
+		float: right;
+		display: block;
+		color: #000000;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 20px;
+	}
+
+	.main-menu a:hover {
+		background-color: #e2a925;
+		color: #000000;
+	}
+
+	.main-menu .icon {
+		display: none;
+	}
+
+	.title-logo {
+		position: absolute;
+		z-index: 1;
+		width: min(70vw, 700px);
+		text-align: center;
+	}
+
+	.title-logo img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+
+
+	
 
 
 </style>
